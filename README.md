@@ -122,7 +122,7 @@ Returns all specified products by Video's id
 Creates a new Product and returns the new object
 
 <ul>
-    <li>**URL Params**<br>None</li>
+    <li><strong>URL Params</strong><br>None</li>
     <li>Headers<br>Content-Type: application/json</li>
     <li>Data Params<br>None</li>
 </ul>
