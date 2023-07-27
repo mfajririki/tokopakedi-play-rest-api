@@ -33,6 +33,7 @@ Return all videos in the system
         </ul>
     </li>
 </ul>
+
 ```javascript
 [
     {<video_object>},
