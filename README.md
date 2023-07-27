@@ -29,7 +29,17 @@ Return all videos in the system
     <li>Headers<br>Content-Type: application/json</li>
     <li>Success Response<br>
         <ul>
-            <li>Code: 200</li>
+            <li>
+                Code: 200<br>
+                Content:<br>
+                ```javascript
+                [
+                    {<video_object>},
+                    {<video_object>},
+                    {<video_object>},
+                ]
+                ```
+            </li>
         </ul>
     </li>
 </ul>
