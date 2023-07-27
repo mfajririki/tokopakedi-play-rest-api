@@ -63,7 +63,7 @@ Creates a new Video and returns the new object.
 <ul>
     <li>Success Response<br>
         <ul>
-            <li>Code: 200<br>Content:<span style="background-color: grey">{ <video_object> }</span></li>
+            <li>Code: 200<br>Content:```{ <video_object> }```</li>
         </ul>
     </li>
 </ul>
