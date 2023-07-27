@@ -41,3 +41,29 @@ Return all videos in the system
     {<video_object>},
 ]
 ```
+
+## POST /api/v1/videos
+
+Creates a new Video and returns the new object.
+
+<ul>
+    <li>URL Params<br>None</li>
+    <li>Headers<br>Content-Type: application/json</li>
+    <li>Data Params<br>None</li>
+</ul>
+
+```javascript
+{
+    title: String,
+    author: String,
+    imgUrl: String
+}
+```
+
+<ul>
+    <li>Success Response<br>
+        <ul>
+            <li>Code: 200<br>Content:<span style="background-color: grey">{ <video_object> }</span></li>
+        </ul>
+    </li>
+</ul>
