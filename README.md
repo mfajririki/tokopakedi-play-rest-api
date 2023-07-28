@@ -4,7 +4,7 @@ Tokopakedi Play is a clone from Tokopedia Play.
 
 ## Installation
 
-Make sure [node.js](https://nodejs.org/en) and [MongoDB](https://www.mongodb.com/) is already instaled.
+Make sure [node.js](https://nodejs.org/en) and [MongoDB](https://www.mongodb.com/) is already installed.
 
 Clone the repository by running the below code on your terminal
 
@@ -18,7 +18,7 @@ Open the project directory or
 cd tokopakedi-play-rest-api
 ```
 
-`` Use the package manager `npm` to install ``
+Use the package manager `npm` to install
 
 ```bash
 npm install
@@ -28,6 +28,17 @@ Run the project
 
 ```bash
 npm start
+```
+
+The result below means the project is running successfully
+
+```bash
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+[nodemon] restarting due to changes...
+[nodemon] starting `node index.js`
+Server started at 3069
+Database Connected
 ```
 
 We can run the endpoints below with [Postman](https://www.postman.com/)
