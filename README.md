@@ -13,7 +13,7 @@ Tokopakedi Play is a clone from Tokopedia Play.
     _id: ObjectId,
     title: String,
     author: String,
-    imgUrl: String
+    imgUrl: String,
     createdAt: datetime(iso 8601),
     updateAt: datetime(iso 8601)
 }
@@ -64,6 +64,11 @@ Creates a new Video and returns the new object.
     <li>Success Response<br>
         <ul>
             <li>Code: 200<br>Content: <code>{ &lt;video_object&gt; }</code></li>
+        </ul>
+    </li>
+    <li>Error Response<br>
+        <ul>
+            <li>Code: 500<br>Content: <code>{ error : error }</code></li>
         </ul>
     </li>
 </ul>
