@@ -2,6 +2,36 @@
 
 Tokopakedi Play is a clone from Tokopedia Play.
 
+## Installation
+
+Make sure [node.js](https://nodejs.org/en) and [MongoDB](https://www.mongodb.com/) is already instaled.
+
+Clone the repository by running the below code on your terminal
+
+```bash
+git clone https://github.com/mfajririki/tokopakedi-play-rest-api.git
+```
+
+Open the project directory or
+
+```bash
+cd tokopakedi-play-rest-api
+```
+
+`` Use the package manager `npm` to install ``
+
+```bash
+npm install
+```
+
+Run the project
+
+```bash
+npm start
+```
+
+We can run the endpoints below with [Postman](https://www.postman.com/)
+
 #Video
 
 <ul>
@@ -122,7 +152,7 @@ Returns all specified products by Video's id
     </li>
 </ul>
 
-## POST /products
+## POST /api/v1/products
 
 Creates a new Product and returns the new object
 
@@ -136,7 +166,7 @@ Creates a new Product and returns the new object
 {
     title: String,
     price: Number,
-    productUrl: String
+    productUrl: String,
     videoId: String
 }
 ```
