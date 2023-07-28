@@ -33,9 +33,6 @@ npm start
 6. The result below means the project is running successfully
 
 ```bash
-[nodemon] restarting due to changes...
-[nodemon] starting `node index.js`
-[nodemon] restarting due to changes...
 [nodemon] starting `node index.js`
 Server started at 3000
 Database Connected
