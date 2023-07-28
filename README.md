@@ -14,7 +14,7 @@ Tokopakedi Play is a clone from Tokopedia Play.
     title: String,
     author: String,
     imgUrl: String
-    createdAt: datetime(iso 8601)
+    createdAt: datetime(iso 8601),
     updateAt: datetime(iso 8601)
 }
 ```
@@ -81,7 +81,7 @@ Creates a new Video and returns the new object.
     price: Number,
     productUrl: String,
     videoId: String,
-    createdAt: datetime(iso 8601)
+    createdAt: datetime(iso 8601),
     updateAt: datetime(iso 8601)
 }
 ```
@@ -130,8 +130,9 @@ Creates a new Product and returns the new object
 ```javascript
 {
     title: String,
-    author: String,
-    imgUrl: String
+    price: Number,
+    productUrl: String
+    videoId: String
 }
 ```
 
@@ -149,3 +150,80 @@ Creates a new Product and returns the new object
 </ul>
 
 #Comment
+
+<ul>
+    <li>Comment object</li>
+</ul>
+
+```javascript
+{
+    _id: ObjectId,
+    username: String,
+    comment: String,
+    videoId: String,
+    createdAt: datetime(iso 8601),
+    updateAt: datetime(iso 8601)
+}
+```
+
+## GET /api/v1/comments/:videoId
+
+Returns all specified products by Video's id
+
+<ul>
+    <li>URL Params<br><i>Required: <code>videoId=[String]</code></i></li>
+    <li>Headers<br>Content-Type: application/json</li>
+    <li>Data Params<br>None</li>
+    <li>Success Response<br>
+        <ul>
+            <li>Code: 200<br>Content:</li>
+        </ul>
+    </li>
+</ul>
+
+```javascript
+[
+    {<comment_object>},
+    {<comment_object>},
+    {<comment_object>},
+]
+```
+
+<ul>
+    <li>Error Response<br>
+        <ul>
+            <li>Code: 500<br>Content: <code>{ error : error }</code></li>
+        </ul>
+    </li>
+</ul>
+
+## POST /api/v1/comments
+
+Creates a new Comment and returns the new object
+
+<ul>
+    <li><strong>URL Params</strong><br>None</li>
+    <li>Headers<br>Content-Type: application/json</li>
+    <li>Data Params<br>None</li>
+</ul>
+
+```javascript
+{
+    username: String,
+    comment: String,
+    videoId: String
+}
+```
+
+<ul>
+    <li>Success Response<br>
+        <ul>
+            <li>Code: 200<br>Content: <code>{ &lt;comment_object&gt; }</code></li>
+        </ul>
+    </li>
+    <li>Error Response<br>
+        <ul>
+            <li>Code: 500<br>Content: <code>{ error : error }</code></li>
+        </ul>
+    </li>
+</ul>
