@@ -1,47 +1,48 @@
 # Tokopakedi Play REST API
 
-Tokopakedi Play is a clone from Tokopedia Play.
+Tokopakedi Play is a clone from [Tokopedia Play](https://www.tokopedia.com/play/channels). This repository countains the source code and examples for building a RESTful API from scratch. Leverage the popular Node.js framework, Express.js, to create a lightweight and scalable API server. This API follows the RESTful principles, allowing clients to interact with resources through standard HTTP methods like GET, POST, PUT, and DELETE.
 
 ## Installation
 
-Make sure [node.js](https://nodejs.org/en) and [MongoDB](https://www.mongodb.com/) is already installed.
+1. Make sure [node.js](https://nodejs.org/en) and [MongoDB](https://www.mongodb.com/) is already installed.
 
-Clone the repository by running the below code on your terminal
+2. Clone the repository by running the below code on your terminal
 
 ```bash
 git clone https://github.com/mfajririki/tokopakedi-play-rest-api.git
 ```
 
-Open the project directory or
+3. Open the project directory or
 
 ```bash
 cd tokopakedi-play-rest-api
 ```
 
-Use the package manager `npm` to install
+4. Use the package manager `npm` to install
 
 ```bash
 npm install
 ```
 
-Run the project
+5. Run the project
 
 ```bash
 npm start
 ```
 
-The result below means the project is running successfully
+6. The result below means the project is running successfully
 
 ```bash
 [nodemon] restarting due to changes...
 [nodemon] starting `node index.js`
 [nodemon] restarting due to changes...
 [nodemon] starting `node index.js`
-Server started at 3069
+Server started at 3000
 Database Connected
 ```
 
-We can run the endpoints below with [Postman](https://www.postman.com/)
+7. Access the API at `http://localhost:3000/api`.
+   Run the endpoints below with [Postman](https://www.postman.com/)
 
 #Video
 
