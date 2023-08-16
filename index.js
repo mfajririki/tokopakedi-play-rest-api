@@ -18,13 +18,7 @@ database.once("connected", () => {
   console.log("Database Connected");
 });
 
-// Call Routes
-const videoRoute = require("./routes/video.routes");
-const productRoute = require("./routes/product.routes");
-const commentRoute = require("./routes/comments.routes");
-
 const app = express();
-app.use(cors());
 
 app.use(express.json());
 app.use(bodyParser.json());
@@ -33,6 +27,12 @@ app.use(
     extended: true,
   })
 );
+app.use(cors());
+
+// Call Routes
+const videoRoute = require("./routes/video.routes");
+const productRoute = require("./routes/product.routes");
+const commentRoute = require("./routes/comments.routes");
 
 // Routes
 app.use("/api/v1/videos", videoRoute);

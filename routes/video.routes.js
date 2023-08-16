@@ -11,6 +11,16 @@ router.get("/", async (req, res) => {
   }
 });
 
+router.get("/:videoId", async (req, res) => {
+  const { videoId } = req.params;
+  try {
+    const video = await Video.findById(videoId);
+    res.json(video);
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+});
+
 router.post("/", async (req, res) => {
   const { title, author, videoUrl } = req.body;
   const youtubeId = videoUrl.slice(-11);
