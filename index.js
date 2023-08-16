@@ -3,6 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
+const cors = require("cors");
 const PORT = process.env.PORT;
 const mongoString = process.env.DATABASE_URL;
 
@@ -23,6 +24,7 @@ const productRoute = require("./routes/product.routes");
 const commentRoute = require("./routes/comments.routes");
 
 const app = express();
+app.use(cors());
 
 app.use(express.json());
 app.use(bodyParser.json());
