@@ -12,11 +12,14 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  const { title, author, imgUrl } = req.body;
+  const { title, author, videoUrl } = req.body;
+  const youtubeId = videoUrl.slice(-11);
   const video = new Video({
     title: title,
     author: author,
-    imgUrl: imgUrl,
+    videoUrl: videoUrl,
+    youtubeId: youtubeId,
+    views: 0,
   });
   try {
     const videoToSave = await video.save();

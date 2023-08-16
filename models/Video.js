@@ -10,9 +10,17 @@ const videoSchema = new mongoose.Schema(
       required: true,
       type: String,
     },
-    imgUrl: {
+    videoUrl: {
       required: true,
       type: String,
+    },
+    youtubeId: {
+      required: true,
+      type: String,
+    },
+    views: {
+      required: true,
+      type: Number,
     },
   },
   {
