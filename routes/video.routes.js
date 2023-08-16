@@ -29,4 +29,27 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.put("/:videoId", async (req, res) => {
+  try {
+    const { videoId } = req.params;
+    const updatedVideoData = req.body;
+
+    const result = await Video.findByIdAndUpdate(videoId, updatedVideoData);
+
+    res.json(result);
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+});
+
+router.delete("/:videoId", async (req, res) => {
+  try {
+    const { videoId } = req.params;
+    const deletedVideoData = await Video.findByIdAndDelete(videoId);
+    res.json(`Video ${deletedVideoData.title} has been deleted`);
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+});
+
 module.exports = router;
