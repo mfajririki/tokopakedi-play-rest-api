@@ -15,6 +15,9 @@ router.get("/:videoId", async (req, res) => {
   const { videoId } = req.params;
   try {
     const video = await Video.findById(videoId);
+    const updatedVideo = await Video.findByIdAndUpdate(videoId, {
+      views: video.views + 1,
+    });
     res.json(video);
   } catch (error) {
     res.status(400).json({ message: error.message });

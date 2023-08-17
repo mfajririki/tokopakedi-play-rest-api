@@ -12,11 +12,13 @@ router.get("/:videoId", async (req, res) => {
   }
 });
 
-router.post("/", async (req, res) => {
-  const { title, price, productUrl, videoId } = req.body;
+router.post("/:videoId", async (req, res) => {
+  const { videoId } = req.params;
+  const { title, price, imgUrl, productUrl } = req.body;
   const product = new Product({
     title: title,
     price: price,
+    imgUrl: imgUrl,
     productUrl: productUrl,
     videoId: videoId,
   });

@@ -12,8 +12,9 @@ router.get("/:videoId", async (req, res) => {
   }
 });
 
-router.post("/", async (req, res) => {
-  const { username, comment, videoId } = req.body;
+router.post("/:videoId", async (req, res) => {
+  const { videoId } = req.params;
+  const { username, comment } = req.body;
   const newComment = new Comment({
     username: username,
     comment: comment,

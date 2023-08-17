@@ -38,6 +38,9 @@ const commentRoute = require("./routes/comments.routes");
 app.use("/api/v1/videos", videoRoute);
 app.use("/api/v1/products", productRoute);
 app.use("/api/v1/comments", commentRoute);
+app.get("*", (req, res) => {
+  res.json("Invalid URL");
+});
 
 app.listen(PORT, () => {
   console.log(`Server started at ${PORT}`);
