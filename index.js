@@ -7,16 +7,15 @@ const cors = require("cors");
 const PORT = process.env.PORT || 3000;
 const mongoString = process.env.DATABASE_URL;
 
-mongoose.connect(mongoString);
-const database = mongoose.connection;
-
-database.on("error", (error) => {
-  console.log(error);
-});
-
-database.once("connected", () => {
-  console.log("Database Connected");
-});
+const connectDB = async () => {
+  try {
+    const conn = await mongoose.connect(mongoString);
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
+  } catch (error) {
+    console.log(error);
+    process.exit(1);
+  }
+};
 
 const app = express();
 
@@ -42,6 +41,8 @@ app.get("*", (req, res) => {
   res.json("Invalid URL");
 });
 
-app.listen(PORT, () => {
-  console.log(`Server started at ${PORT}`);
+connectDB().then(() => {
+  app.listen(PORT, () => {
+    console.log("listening for requests");
+  });
 });
