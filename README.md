@@ -18,19 +18,25 @@ git clone https://github.com/mfajririki/tokopakedi-play-rest-api.git
 cd tokopakedi-play-rest-api
 ```
 
-4. Use the package manager `npm` to install
+4. copy .env file
+
+```bash
+cp .env.example .env
+```
+
+5. Use the package manager `npm` to install
 
 ```bash
 npm install
 ```
 
-5. Run the project
+6. Run the project
 
 ```bash
 npm start
 ```
 
-6. The result below means the project is running successfully
+7. The result below means the project is running successfully
 
 ```bash
 [nodemon] starting `node index.js`
@@ -38,7 +44,7 @@ Server started at 3000
 Database Connected
 ```
 
-7. Access the API at `http://localhost:3000/api`.
+8. Access the API at `http://localhost:3000/api`.
    Run the endpoints below with [Postman](https://www.postman.com/)
 
 #Video
